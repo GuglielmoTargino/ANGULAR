@@ -1,1 +1,10 @@
-<p>CASA TARGINO LEGAL!</p>
+<p>CASA TARGINO LEGAL!{{nome}}</p>
+<h1>{{palavraextrena}}</h1>
+
+<button (click)="submit()">CLIQUE AQUI</button>
+<!-- <button (click)="exibe($event)">CLIQUE AQUI</button> -->
+@if(id>40){
+    <h1> Valor maior que 40</h1>
+}@else {
+    <h1>Valor menor que 40</h1>
+}

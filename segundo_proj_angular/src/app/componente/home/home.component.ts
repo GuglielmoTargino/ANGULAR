@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { FormularioService } from '../../services/formulario.service';
 
 @Component({
   selector: 'app-home23',
@@ -7,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  nome="guga";
-    id=45;
+    @Input() palavraextrena!: string;
+    nome="guga56";
+    id=55;
+    private form=inject(FormularioService);
+
+    exibe(event: any){  
+
+      console.log("Clicou!!!");
+
+    }
+
+   submit(){
+    this.form.enviaForm("Formulario Concluido");
+   }
 
 }
