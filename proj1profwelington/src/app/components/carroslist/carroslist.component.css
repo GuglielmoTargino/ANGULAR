@@ -3,3 +3,9 @@
 p{
     color: blueviolet;
 }
+
+.tabela1{
+    width: 600px;
+    background-color: rgb(204, 235, 192);
+    height: 200px;
+}
