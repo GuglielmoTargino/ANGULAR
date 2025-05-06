@@ -4,19 +4,33 @@
 
         <div class="col-lg-4">
         </div>
-        <div class="col-lg-4" centralizar topo >
-            <mdb-form-control>
-                <input mdbInput type="text" id="iptusuario" class="form-control" />
-                <label mdbLabel class="form-label" for="lblusuario">Usuário</label>
-                </mdb-form-control>
-            <br>
-                <mdb-form-control>
-                <input mdbInput type="password" id="iptsenha" class="form-control" />
-                <label mdbLabel class="form-label" for="lblsenha">Senha</label>
-                </mdb-form-control>
-            <br>
-                <button type="button" class="btn btn-primary btn-rounded" mdbRipple>Acessar</button>
+      
+        <div class="col-lg-4 centralizar topo">
+            <h1> Identifique-se</h1>
+
+            <div class="card">
+                <div class="card-body">  
+                    
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="putusuario" class="form-control" [(ngModel)]="usu" />
+                        <label mdbLabel class="form-label" for="lblusuario">Usuário</label>
+                        </mdb-form-control>
+                    <br>
+                        <mdb-form-control>
+                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="sen" />
+                        <label mdbLabel class="form-label" for="lblsenha">Senha</label>
+                        </mdb-form-control>
+                    <br>
+                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="logar()">Acessar</button>
+                </div>
+            </div>
+
+         
         </div>
+
+
+
+       
     
         <div class="col-lg-4">
         </div>
