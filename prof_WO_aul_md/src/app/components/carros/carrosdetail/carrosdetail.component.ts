@@ -10,11 +10,11 @@ import {Carro} from'../../../models/carro';
   styleUrl: './carrosdetail.component.css'
 })
 export class CarrosdetailComponent {
-  carro: Carro = new Carro(0,"");
+  carango: Carro = new Carro(0,"");
 
 
   save(){
-    //
+    alert(" Carro salvo");
   }
 
 }

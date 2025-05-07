@@ -6,22 +6,18 @@
         </div>
       
         <div class="col-lg-4 centralizar topo">
-            <h1> Identifique-se</h1>
+            <h2>Cadastro de Carro</h2>
 
             <div class="card">
                 <div class="card-body">  
                     
                     <mdb-form-control>
-                        <input mdbInput type="text" id="putusuario" class="form-control" [(ngModel)]="usu" />
-                        <label mdbLabel class="form-label" for="lblusuario">Usuário</label>
+                        <input mdbInput type="text" id="putusuario" class="form-control" [(ngModel)]="carango.nome" />
+                        <label mdbLabel class="form-label" for="lblusuario">Nome</label>
                         </mdb-form-control>
                     <br>
-                        <mdb-form-control>
-                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="sen" />
-                        <label mdbLabel class="form-label" for="lblsenha">Senha</label>
-                        </mdb-form-control>
-                    <br>
-                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="save()">Acessar</button>
+                  
+                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="save()">Salvar</button>
                 </div>
             </div>
 
