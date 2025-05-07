@@ -3,7 +3,9 @@
 
 
 .direita{
-    text-align: right;
-   border-right: 10px;
-   
+    text-align: right;   
+}
+
+#botao{
+    margin-right: 10px;
 }
