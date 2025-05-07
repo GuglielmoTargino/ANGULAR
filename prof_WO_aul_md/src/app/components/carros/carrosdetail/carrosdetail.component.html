@@ -1,30 +1,46 @@
+
 <div class="container">
     <div class="row">
-    
 
-        <div class="col-lg-12">
-            <br>
+        <div class="col-lg-4">
+        </div>
+      
+        <div class="col-lg-4 centralizar topo">
+            <h1> Identifique-se</h1>
+
             <div class="card">
-                <div class="card-body">
-                   
+                <div class="card-body">  
                     
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nome</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-  
-                            <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="save()">Deletar</button>
-                        </tbody>
-                    </table>
-                   
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="putusuario" class="form-control" [(ngModel)]="usu" />
+                        <label mdbLabel class="form-label" for="lblusuario">Usuário</label>
+                        </mdb-form-control>
+                    <br>
+                        <mdb-form-control>
+                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="sen" />
+                        <label mdbLabel class="form-label" for="lblsenha">Senha</label>
+                        </mdb-form-control>
+                    <br>
+                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="save()">Acessar</button>
                 </div>
             </div>
 
+         
         </div>
+
+
+
+       
+    
+        <div class="col-lg-4">
+        </div>
+
     </div>
+
+   
+
+
 </div>
+
+
 
