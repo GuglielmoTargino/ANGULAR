@@ -9,6 +9,7 @@ import { MarcasdetailComponent } from './components/marcas/marcasdetail/marcasde
 export const routes: Routes = [
     {path:"", redirectTo:"login", pathMatch: 'full'},
     {path:"login", component:LoginComponent},
+    
     {path:"admin", component:PrincipalComponent, children:[
         {path:"carros", component:CarroslistComponent},
         {path:"carros/new", component:CarrosdetailComponent},
