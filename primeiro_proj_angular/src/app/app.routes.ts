@@ -5,7 +5,14 @@ import { PetsComponent } from './componentes/pets/pets.component';
 import { Component } from '@angular/core';
 
 export const routes: Routes = [
-    {path:"casa", component: CasalisteComponent},
-  {path: "pet", component: PetsComponent , children: [{path: "casa", component: CasalisteComponent}]}
+    {path:"casa", component: CasalisteComponent,
+      children:[
+        {path: "/rua", component: RualisteComponent},
+       {path: "pet", component: PetsComponent}
+
+      ]
+    }
+      
+  
 
 ];

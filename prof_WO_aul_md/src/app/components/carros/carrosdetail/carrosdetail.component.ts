@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import {Carro} from'../../../models/carro';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { CarroService } from '../../../services/carro.service';
 
 @Component({
   selector: 'app-carrosdetail',
@@ -11,7 +12,11 @@ import Swal from 'sweetalert2'
   styleUrl: './carrosdetail.component.css'
 })
 export class CarrosdetailComponent {
+
+  @Input("carro") caro = new Carro(0,"");
+  @Output("retorno") retorno=new EventEmitter<any>();
   carango: Carro = new Carro(0,"");
+  carroService = inject(CarroService);
 
 
   save(){
@@ -36,6 +41,33 @@ export class CarrosdetailComponent {
       }
     })
   }
+
+
+   findById(id: number){
+    this.carroService.find(id).subscribe({
+
+      next: retorno =>{
+        this.caro =retorno;
+     
+     
+      },
+      error: erro =>{
+
+        alert("Sem carro ");
+
+
+      }
+      
+
+
+
+
+
+    });
+
+  }
+
+
 
  
 
