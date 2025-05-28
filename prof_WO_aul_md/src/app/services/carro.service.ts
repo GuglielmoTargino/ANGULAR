@@ -17,4 +17,26 @@ export class CarroService {
     return this.http.get<Carro>(this.api+"/find/{id}"+id);
 
   }
+   save(carro: Carro): Observable<string>{
+    return this.http.post<string>(this.api+"/save",{ResponseType:'text' as 'json'});
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
