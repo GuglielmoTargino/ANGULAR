@@ -14,24 +14,32 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Ano</th>
                                 <th>Nome</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+
                             </tr>
+
                         </thead>
+                    
                         <tbody>
                             @for (x of lista; track $index){
                                 <tr>
                                     <td>{{x.id}}</td>
                                     <td>{{x.nome}}</td>
-                                    <td class="direita">
+                                    <td>{{x.ano}}</td>
+                                    <td>{{x.marca}}</td>
+                                    <td>{{x.modelo}}</td>
+
+                                    <td class="direita">                                      
                                       
                                         <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>   
                                                                       
                                         <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="deletar()">Deletar</button>
 
-
                                     </td>
                                 </tr>
-
                             }
                             
                         </tbody>

@@ -16,9 +16,9 @@ export class CarroslistComponent {
 
 
   constructor(){
-    this.lista.push(new Carro(1,'Brava'));
-    this.lista.push(new Carro(2,'Marea'));
-    this.lista.push(new Carro(3,'Linea'));
+    this.lista.push(new Carro(1,'Brava',2000,'fiat','hatch'));
+    this.lista.push(new Carro(2,'Marea',2010,'fiat','sedan'));
+    this.lista.push(new Carro(3,'Linea',2018,'fiat','sedan'));
   }
 
 

@@ -13,9 +13,9 @@ import { CarroService } from '../../../services/carro.service';
 })
 export class CarrosdetailComponent {
 
-  @Input("carro") caro = new Carro(0,"");
+  @Input("carro") caro = new Carro(0,"",0,"","");
   @Output("retorno") retorno=new EventEmitter<any>();
-  carango: Carro = new Carro(0,"");
+  carango: Carro = new Carro(0,"",0,"","");
   carroService = inject(CarroService);
 
 
@@ -47,22 +47,11 @@ export class CarrosdetailComponent {
     this.carroService.find(id).subscribe({
 
       next: retorno =>{
-        this.caro =retorno;
-     
-     
+        this.caro =retorno;     
       },
       error: erro =>{
-
         alert("Sem carro ");
-
-
       }
-      
-
-
-
-
-
     });
 
   }
