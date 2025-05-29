@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { Carro } from '../../../models/carro';
 import { RouterLink } from '@angular/router';
 import { CarroService } from '../../../services/carro.service';
+import { CarrosdetailComponent } from '../carrosdetail/carrosdetail.component';
 
 @Component({
   selector: 'app-carroslist',
-  imports: [RouterLink],
+  imports: [RouterLink,CarrosdetailComponent],
   templateUrl: './carroslist.component.html',
   styleUrl: './carroslist.component.css'
 })
@@ -13,6 +14,7 @@ import { CarroService } from '../../../services/carro.service';
 export class CarroslistComponent {
   lista: Carro[]=[];
   carroService = inject(CarroService);
+  carro_send: Carro=new Carro(0,'',0,'','');
 
 
   constructor(){

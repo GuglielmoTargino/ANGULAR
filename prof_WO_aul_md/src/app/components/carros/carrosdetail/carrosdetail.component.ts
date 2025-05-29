@@ -11,13 +11,16 @@ import { CarroService } from '../../../services/carro.service';
   templateUrl: './carrosdetail.component.html',
   styleUrl: './carrosdetail.component.css'
 })
+
+
+
 export class CarrosdetailComponent {
 
-  @Input("carro") caro = new Carro(0,"",0,"","");
+  @Input("carro") carro = new Carro(0,"",0,"","");
   @Output("retorno") retorno=new EventEmitter<any>();
+
   carango: Carro = new Carro(0,"",0,"","");
   carroService = inject(CarroService);
-
 
   save(){
  
@@ -47,7 +50,7 @@ export class CarrosdetailComponent {
     this.carroService.find(id).subscribe({
 
       next: retorno =>{
-        this.caro =retorno;     
+        this.carro =retorno;     
       },
       error: erro =>{
         alert("Sem carro ");
@@ -55,6 +58,43 @@ export class CarrosdetailComponent {
     });
 
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
