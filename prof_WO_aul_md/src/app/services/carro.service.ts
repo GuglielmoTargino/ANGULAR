@@ -13,6 +13,11 @@ export class CarroService {
 
   constructor() { }
 
+   findall(): Observable<Carro[]>{
+    return this.http.get<Carro[]>(this.api+"/findall");
+
+  }
+
   find(id: number): Observable<Carro>{
     return this.http.get<Carro>(this.api+"/find/{id}"+id);
 
