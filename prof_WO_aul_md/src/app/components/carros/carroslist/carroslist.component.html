@@ -7,13 +7,16 @@
             <div class="card">
                 <div class="card-body">
                     <div class="direita">
+                        <!--
                         <button type="button" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/new" >Novo</button>
+                        -->
                     </div>
                     
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>ID</th>                                                           
+                        
+                                <th>ID</th>                                                         
                                 <th>Nome</th>
                                  <th>Ano</th>                                 
                                 <th>Marca</th>
@@ -31,8 +34,7 @@
                                     <td>{{x.marca}}</td>
                                     <td>{{x.modelo}}</td>
 
-                                    <td class="direita"> 
-                                                                         
+                                    <td class="direita">                                                                        
                                       
                                         <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>   
                                                                       

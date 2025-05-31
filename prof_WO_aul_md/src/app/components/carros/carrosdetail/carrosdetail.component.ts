@@ -18,9 +18,8 @@ export class CarrosdetailComponent {
 
   @Input("carro") carro = new Carro(0,"",0,"","");
   @Output("retorno") retorno=new EventEmitter<any>();
-
   carango: Carro = new Carro(0,"",0,"","");
-  carroService = inject(CarroService);
+  carroservice = inject(CarroService);
 
   save(){
  
@@ -46,8 +45,8 @@ export class CarrosdetailComponent {
   }
 
 
-   findById(id: number){
-    this.carroService.find(id).subscribe({
+   find(id: number){
+    this.carroservice.find(id).subscribe({
 
       next: retorno =>{
         this.carro =retorno;     
@@ -100,4 +99,4 @@ export class CarrosdetailComponent {
 
  
 
-}
+}//++++++++++++++++++++++++++++++++++++++FIM CLASS+++++++++++++++++++++++++++++++++++++++++++++++++++++
