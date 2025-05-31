@@ -31,11 +31,12 @@
                                     <td>{{x.marca}}</td>
                                     <td>{{x.modelo}}</td>
 
-                                    <td class="direita">                                      
+                                    <td class="direita"> 
+                                                                         
                                       
                                         <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>   
                                                                       
-                                        <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="deletar()">Deletar</button>
+                                        <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="deletar(x.id)">Deletar</button>
 
                                     </td>
                                 </tr>

@@ -27,6 +27,13 @@ export class CarroService {
 
   }
 
+   delete(idcarro: number): Observable<string>{
+ 
+    return this.http.delete<string>(this.api+"/delete/"+idcarro, {responseType:'text' as 'json'});
+   
+
+  }
+
 
 
 
