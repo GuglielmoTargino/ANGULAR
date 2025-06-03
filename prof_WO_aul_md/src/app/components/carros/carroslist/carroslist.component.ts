@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { Carro } from '../../../models/carro';
 import { RouterLink } from '@angular/router';
 import { CarroService } from '../../../services/carro.service';
-import { CarrosdetailComponent } from '../carrosdetail/carrosdetail.component';
+///import { CarrosdetailComponent } from '../carrosdetail/carrosdetail.component';
+//imports: [RouterLink,CarrosdetailComponent],
 
 @Component({
   selector: 'app-carroslist',
-  imports: [RouterLink,CarrosdetailComponent],
+  imports: [RouterLink],
   templateUrl: './carroslist.component.html',
   styleUrl: './carroslist.component.css'
 })

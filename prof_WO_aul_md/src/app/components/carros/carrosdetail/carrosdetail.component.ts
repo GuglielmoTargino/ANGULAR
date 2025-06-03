@@ -16,7 +16,7 @@ import { ActivatedRoute } from '@angular/router';
 
 
 export class CarrosdetailComponent {
-
+  
   @Input("carro") carro = new Carro(0,"",0,"","");
   @Output("retorno") retorno=new EventEmitter<any>();
   carango: Carro = new Carro(0,"",0,"","");
@@ -24,9 +24,7 @@ export class CarrosdetailComponent {
   carroservice = inject(CarroService);
 
   constructor(){
-
     let id =this.router.snapshot.params['id'];
-
     if(id>10){
       this.find(id);
     }
