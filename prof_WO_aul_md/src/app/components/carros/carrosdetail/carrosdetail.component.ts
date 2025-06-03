@@ -4,6 +4,7 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import {Carro} from'../../../models/carro';
 import Swal from 'sweetalert2';
 import { CarroService } from '../../../services/carro.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-carrosdetail',
@@ -19,7 +20,18 @@ export class CarrosdetailComponent {
   @Input("carro") carro = new Carro(0,"",0,"","");
   @Output("retorno") retorno=new EventEmitter<any>();
   carango: Carro = new Carro(0,"",0,"","");
+  router=inject(ActivatedRoute);
   carroservice = inject(CarroService);
+
+  constructor(){
+
+    let id =this.router.snapshot.params['id'];
+
+    if(id>10){
+      this.find(id);
+    }
+
+  }
 
   save(){
  
@@ -48,8 +60,8 @@ export class CarrosdetailComponent {
    find(id: number){
     this.carroservice.find(id).subscribe({
 
-      next: retorno =>{
-        this.carro =retorno;     
+      next: retor =>{
+        this.carango =retor;     
       },
       error: erro =>{
         alert("Sem carro ");
