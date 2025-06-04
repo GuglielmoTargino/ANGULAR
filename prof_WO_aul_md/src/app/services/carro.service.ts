@@ -25,7 +25,7 @@ export class CarroService {
 
 
    save(carro: Carro): Observable<string>{
-    return this.http.post<string>(this.api+"/save",{ResponseType:'text' as 'json'});
+    return this.http.post<string>(this.api+"/save",carro,{responseType:'text' as 'json'});
   }
 
 
