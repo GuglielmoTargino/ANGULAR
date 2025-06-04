@@ -28,6 +28,10 @@ export class CarroService {
     return this.http.post<string>(this.api+"/save",carro,{responseType:'text' as 'json'});
   }
 
+  // atualizar(carro: Carro, id: number): Observable<string>{
+  //  return this.http.post<string>(this.api+"/atualizar"+id,carro, {responseType:'text' as 'json'});
+  //}
+
 
    delete(idcarro: number): Observable<string>{
     return this.http.delete<string>(this.api+"/delete/"+idcarro, {responseType:'text' as 'json'});

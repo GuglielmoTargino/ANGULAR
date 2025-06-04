@@ -31,7 +31,17 @@ export class CarrosdetailComponent {
 
   }
 
-  save(){
+  save(xy: Carro){
+
+     this.carroservice.save(xy).subscribe({
+
+      next: retor =>{
+        alert(retor);     
+      },
+      error: erro =>{
+        alert("Sem carro ");
+      }
+      });
  
     Swal.fire({
       title: 'Do you want to save the changes?',
@@ -65,6 +75,129 @@ export class CarrosdetailComponent {
         alert("Sem carro ");
       }
     });
+
+    /*
+    atualizar(xy: Carro, id: number){
+
+     this.carroservice.atualizar(xy, id).subscribe({
+
+      next: retor =>{
+        //this.carango =retor;     
+      },
+      error: erro =>{
+        alert("Sem carro ");
+      }
+      });
+ 
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+      denyButtonText: 'No',
+      customClass: {
+        actions: 'my-actions',
+        cancelButton: 'order-1 right-gap',
+        confirmButton: 'order-2',
+        denyButton: 'order-3',
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+      }
+    })
+  }
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   }
 
