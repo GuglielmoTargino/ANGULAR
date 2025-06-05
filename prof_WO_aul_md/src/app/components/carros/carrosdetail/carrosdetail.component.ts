@@ -25,7 +25,7 @@ export class CarrosdetailComponent {
 
   constructor(){
     let id =this.router.snapshot.params['id'];
-    if(id>10){
+    if(id){
       this.find(id);
     }
 
