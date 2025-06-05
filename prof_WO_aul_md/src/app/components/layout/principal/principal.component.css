@@ -1,0 +1,11 @@
+.sidebar{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: rgb(219, 241, 241);
+}
+
+.conteiner-fluid{
+    padding-left: 300px;
+}

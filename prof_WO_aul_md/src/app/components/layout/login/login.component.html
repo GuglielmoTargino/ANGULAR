@@ -17,7 +17,7 @@
                         </mdb-form-control>
                     <br>
                         <mdb-form-control>
-                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="sen" />
+                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="sen"  (keyup.enter)="logar()"/>
                         <label mdbLabel class="form-label" for="lblsenha">Senha</label>
                         </mdb-form-control>
                     <br>
