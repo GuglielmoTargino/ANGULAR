@@ -1,9 +1,10 @@
 export class Carro {
     id!: number;
     nome!: string;
-    ano!:number;
+   
     marca!:string;
     modelo!:string;
+     ano!:number;
 
     constructor(id: number, nome: string, ano: number, marca: string, modelo:string){
         this.id=id;

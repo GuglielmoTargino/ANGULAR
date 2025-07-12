@@ -17,8 +17,8 @@ import { ActivatedRoute } from '@angular/router';
 
 export class CarrosdetailComponent {
   
-  //@Input("carro") carro = new Carro(0,"",0,"","");
-  //@Output("retorno") retorno=new EventEmitter<any>();
+  @Input("carro") carro = new Carro(0,"",0,"","");
+  @Output("retorno") retorno=new EventEmitter<any>();
   carango: Carro = new Carro(0,"",0,"","");
   router=inject(ActivatedRoute);
   carroservice = inject(CarroService);
