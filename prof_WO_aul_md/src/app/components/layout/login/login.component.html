@@ -12,12 +12,12 @@
                 <div class="card-body">  
                     
                     <mdb-form-control>
-                        <input mdbInput type="text" id="putusuario" class="form-control" [(ngModel)]="usu" />
+                        <input mdbInput type="text" id="putusuario" class="form-control" [(ngModel)]="login.username" />
                         <label mdbLabel class="form-label" for="lblusuario">Usuário</label>
                         </mdb-form-control>
                     <br>
                         <mdb-form-control>
-                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="sen"  (keyup.enter)="logar()"/>
+                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="login.password"  (keyup.enter)="logar()"/>
                         <label mdbLabel class="form-label" for="lblsenha">Senha</label>
                         </mdb-form-control>
                     <br>

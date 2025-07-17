@@ -27,6 +27,7 @@ export class LoginComponent {
 
        if (token) {
         this.loginService.addToken(token);
+        this.router.navigate(['/admin/carro']);
         
       } else{
         alert('Senha ou senha errada');
