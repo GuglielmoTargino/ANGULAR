@@ -2,6 +2,53 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../../../auth/login.service';
+import { Login } from '../../../auth/login';
+;
+
+@Component({
+  selector: 'app-login',
+  imports: [MdbFormsModule, FormsModule],
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
+})
+export class LoginComponent {
+ login: Login = new Login();
+
+  router =inject(Router);
+  loginService = inject(LoginService);
+  constructor(){
+
+  }
+
+  logar(){
+    this.loginService.logar(this.login).subscribe({
+     next: token =>{
+
+       if (token) {
+        this.loginService.addToken(token);
+        
+      } else{
+        alert('Senha ou senha errada');
+      }
+     },
+      error: erro =>{
+        alert('Falha operação Tokrn');
+      }
+
+    });
+ 
+  }
+
+}
+
+/**
+ * 
+ * import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { Router } from '@angular/router';
+import { LoginService } from '../../../auth/login.service';
 ;
 
 @Component({
@@ -15,6 +62,7 @@ export class LoginComponent {
   sen!:string;
 
   router =inject(Router);
+  loginService = inject(LoginService)
 
   logar(){
     if(this.usu=='admin' && this.sen=='admin'){
@@ -24,3 +72,5 @@ export class LoginComponent {
   }
 
 }
+
+ */
