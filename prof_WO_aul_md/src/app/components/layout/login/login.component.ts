@@ -24,14 +24,15 @@ export class LoginComponent {
   logar(){
     this.loginService.logar(this.login).subscribe({
      next: token =>{
+      console.log(token);
 
        if (token) {
         this.loginService.addToken(token);
-        this.router.navigate(['/admin/carro']);
+        this.router.navigate(['/admin/carros']);
         
-      } else{
+        } else{
         alert('Senha ou senha errada');
-      }
+        }
      },
       error: erro =>{
         alert('Falha operação Tokrn');
@@ -71,7 +72,6 @@ export class LoginComponent {
     }else
     alert("Senha ou usuário errado");
   }
-
 }
 
  */
