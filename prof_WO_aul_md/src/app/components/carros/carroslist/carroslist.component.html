@@ -1,31 +1,23 @@
 <div class="container">
     <div class="row">  
-        <h2>CarrosList</h2> 
-
+        <h2>CarrosListAluga</h2> 
         <div class="col-lg-12">
             <br>
             <div class="card">
                 <div class="card-body">
-                    <div class="direita">
-                    
-                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/new" >Novo</button>
-               
-                    </div>
-                    
+                    <div class="direita">                    
+                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/new" >Novo</button>               
+                    </div>                    
                     <table class="table table-striped">
                         <thead>
-                            <tr>
-                        
+                            <tr>                        
                                 <th>ID</th>                                                         
                                 <th>Nome</th>
                                 <th>Marca</th>
                                 <th>Modelo</th>
                                  <th>Ano</th>                                 
-                                
                             </tr>
-
-                        </thead>
-                    
+                        </thead>                    
                         <tbody>
                             @for (x of lista; track $index){
                                 <tr>
@@ -33,31 +25,64 @@
                                     <td>{{x.nome}}</td>
                                     <td>{{x.marca}}</td>
                                     <td>{{x.modelo}}</td>
-                                    <td>{{x.ano}}</td>
-                                    
+                                    <td>{{x.ano}}</td>                                   
 
                                     <td class="direita"> 
-                                        <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>                 
-                                        <!--
-                                        <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>               
-                                        -->                                                     
-                                                                                                                                    
+                                        <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>                                                                                                                           
                                         <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="deletar(x.id)">Deletar</button>
-
                                     </td>
                                 </tr>
-                            }
-                            
+                            }                            
                         </tbody>
-                    </table>
-                   
+                    </table>                   
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">  
+        <h2>CarrosListAluga</h2> 
+        <div class="col-lg-12">
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="direita">                    
+                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/new" >Novo</button>               
+                    </div>                    
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>                        
+                                <th>ID</th>                                                         
+                                <th>Nome</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                 <th>Ano</th>                                 
+                            </tr>
+                        </thead>                    
+                        <tbody>
+                            @for (x of lista; track $index){
+                                <tr>
+                                    <td>{{x.id}}</td>
+                                    <td>{{x.nome}}</td>
+                                    <td>{{x.marca}}</td>
+                                    <td>{{x.modelo}}</td>
+                                    <td>{{x.ano}}</td>                                   
 
+                                    <td class="direita"> 
+                                        <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>                                                                                                                           
+                                        <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="deletar(x.id)">Deletar</button>
+                                    </td>
+                                </tr>
+                            }                            
+                        </tbody>
+                    </table>                   
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!--
-<app-carrosdetail [carro]="carro_send"></app-carrosdetail>
--->
