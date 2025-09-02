@@ -1,3 +1,7 @@
+
+/*
+
+
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
@@ -22,6 +26,7 @@ export class LoginComponent {
   }
 
   logar(){
+    this.router.navigate(['/admin/carros']);
     this.loginService.logar(this.login).subscribe({
      next: token =>{
       console.log(token);
@@ -44,13 +49,19 @@ export class LoginComponent {
 
 }
 
-/**
- * 
- * import { Component, inject } from '@angular/core';
+
+
+*/
+
+  
+
+
+  
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../../../auth/login.service';
+//import { LoginService } from '../../../auth/login.service';
 ;
 
 @Component({
@@ -60,18 +71,20 @@ import { LoginService } from '../../../auth/login.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  usu!:string;
-  sen!:string;
 
-  router =inject(Router);
-  loginService = inject(LoginService)
+
+  
+  usu!: string;
+  sen!: string;
+
+  router = inject(Router);
 
   logar(){
-    if(this.usu=='admin' && this.sen=='admin'){
+    if(this.usu == 'admin' && this.sen == 'admin'){
       this.router.navigate(['admin/carros']);
     }else
     alert("Senha ou usuário errado");
   }
 }
 
- */
+ 

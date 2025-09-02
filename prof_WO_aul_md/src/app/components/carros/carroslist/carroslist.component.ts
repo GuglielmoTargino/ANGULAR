@@ -1,9 +1,11 @@
+
 import { Component, inject } from '@angular/core';
 import { Carro } from '../../../models/carro';
 import { RouterLink } from '@angular/router';
 import { CarroService } from '../../../services/carro.service';
-///import { CarrosdetailComponent } from '../carrosdetail/carrosdetail.component';
-//imports: [RouterLink,CarrosdetailComponent],
+import { CarrosdetailComponent } from '../carrosdetail/carrosdetail.component';
+import { NgFor } from '@angular/common';
+
 
 @Component({
   selector: 'app-carroslist',
@@ -15,7 +17,7 @@ import { CarroService } from '../../../services/carro.service';
 export class CarroslistComponent {
   lista: Carro[]=[];
   carroservice = inject(CarroService);
-  carro: Carro=new Carro(0,'',0,'','');
+  carro: Carro = new Carro(0,'',0,'','');
 
    constructor(){
     this.atzCarro();
@@ -45,28 +47,6 @@ export class CarroslistComponent {
       },
     })    
   }
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

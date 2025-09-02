@@ -1,8 +1,12 @@
 <table border="1" class="tabela1">
     <thead>
-        <tr>           
-            <th> Nome_th</th>          
-            <th>Marca_th</th>
+        <tr>  
+            
+            <th>id_th</th>
+            <th>Nome_th</th>
+            <th>Marca_th</th>            
+            <th>Modelo_th</th>
+            <th>Ano_th</th>
         </tr>     
     </thead>
 
@@ -10,10 +14,15 @@
 
         @for (carro of lista; track $index) {
         <tr>
+
+            <td>{{carro.id}}</td>
             <td>{{carro.nome}}</td>
-            <td>{{carro.marca}}</td>          
+            <td>{{carro.marca}}</td>            
+            <td>{{carro.modelo}}</td>
+            <td>{{carro.ano}}</td>
+            
         </tr>
-    }
+        }
     </tbody>
 
 </table>

@@ -1,2 +1,9 @@
-<p>carrolist works!</p>
-<app-carrodetalhe></app-carrodetalhe>
+<h2>Lista de Carros</h2>
+
+<ul>
+  <li *ngFor="let carro of lista">
+    <strong>{{ carro.marca }} {{ carro.modelo }}</strong> - Ano: {{ carro.ano }}
+    <a [routerLink]="['/detalhe', carro.id]">Detalhes</a>
+  </li>
+</ul>
+

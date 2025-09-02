@@ -15,9 +15,9 @@ export const routes: Routes = [
             {path:"carros", component:CarroslistComponent},
             {path:"carros/new", component:CarrosdetailComponent},
             {path:"carros/edit/:id", component:CarrosdetailComponent},
-            {path:"marcas", component:MarcaslistComponent},
-            {path:"marcas/new", component:MarcasdetailComponent},
-            {path:"marcas/edit/:id", component:MarcasdetailComponent}
+            //{path:"marcas", component:MarcaslistComponent},
+            //{path:"marcas/new", component:MarcasdetailComponent},
+            //{path:"marcas/edit/:id", component:MarcasdetailComponent}
         ]
     }
 
