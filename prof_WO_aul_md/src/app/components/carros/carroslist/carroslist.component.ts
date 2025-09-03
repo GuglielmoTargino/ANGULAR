@@ -48,6 +48,10 @@ export class CarroslistComponent {
     })    
   }
 
+  devolver(num: number){
+    alert("Carro devolvido!"+num)
+  }
+
 
 
 
