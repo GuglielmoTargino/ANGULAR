@@ -39,11 +39,11 @@ export class ListalugadoComponent {
     })
   }
 
-    /*
-  deletar(num: number){
-    this.carroservice.delete(num).subscribe({    
+    
+  devolve(num: number){
+    this.carroservice.deletealug(num).subscribe({    
       next: vallue => {// requisição success
-         alert("Carro deletado"); 
+         alert("Carro devolvido"); 
          this.atzCarro();           
       },
       error: erro => {// requisição fail
@@ -52,7 +52,7 @@ export class ListalugadoComponent {
     })    
   }
 
- */
+ 
 
 
 
