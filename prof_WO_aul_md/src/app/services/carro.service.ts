@@ -38,6 +38,14 @@ export class CarroService {
     return this.http.delete<string>(this.api+"/delete/"+idcarro, {responseType:'text' as 'json'});
   }
 
+
+
+
+  // atualiza alugados
+   findallalug(): Observable<Carro[]>{
+    return this.http.get<Carro[]>(this.api+"/findallalug");
+  }
+
  
 
 

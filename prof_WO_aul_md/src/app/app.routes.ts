@@ -5,6 +5,7 @@ import { CarroslistComponent } from './components/carros/carroslist/carroslist.c
 import { CarrosdetailComponent } from './components/carros/carrosdetail/carrosdetail.component';
 import { MarcaslistComponent } from './components/marcas/marcaslist/marcaslist.component';
 import { MarcasdetailComponent } from './components/marcas/marcasdetail/marcasdetail.component';
+import { ListalugadoComponent } from './components/carros/listalugado/listalugado.component';
 
 export const routes: Routes = [
     {path:"", redirectTo:"login", pathMatch: 'full'},
@@ -15,7 +16,7 @@ export const routes: Routes = [
             {path:"carros", component:CarroslistComponent},
             {path:"carros/new", component:CarrosdetailComponent},
             {path:"carros/edit/:id", component:CarrosdetailComponent},
-            //{path:"marcas", component:MarcaslistComponent},
+            {path:"alugados", component:ListalugadoComponent},
             //{path:"marcas/new", component:MarcasdetailComponent},
             //{path:"marcas/edit/:id", component:MarcasdetailComponent}
         ]

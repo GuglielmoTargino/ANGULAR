@@ -1,5 +1,5 @@
-
 import { Component, inject } from '@angular/core';
+
 import { Carro } from '../../../models/carro';
 import { RouterLink } from '@angular/router';
 import { CarroService } from '../../../services/carro.service';
@@ -8,16 +8,20 @@ import { NgFor } from '@angular/common';
 
 
 @Component({
-  selector: 'app-carroslist',
-  imports: [RouterLink],
-  templateUrl: './carroslist.component.html',
-  styleUrl: './carroslist.component.css'
+  selector: 'app-listalugado',
+  imports: [],
+  templateUrl: './listalugado.component.html',
+  styleUrl: './listalugado.component.css'
 })
-
-export class CarroslistComponent {
+export class ListalugadoComponent {
   lista: Carro[]=[];
   carroservice = inject(CarroService);
   carro: Carro = new Carro(0,'',0,'','');
+
+
+   devolver(num: number){
+    alert("Carro devolvido!"+num)
+  }
 
    constructor(){
     this.atzCarro();
@@ -25,7 +29,7 @@ export class CarroslistComponent {
 
   
   atzCarro(){
-      this.carroservice.findall().subscribe({
+      this.carroservice.findallalug().subscribe({
       next: vallue => {// requisição success
         this.lista = vallue;          
       },
@@ -35,7 +39,7 @@ export class CarroslistComponent {
     })
   }
 
-    
+    /*
   deletar(num: number){
     this.carroservice.delete(num).subscribe({    
       next: vallue => {// requisição success
@@ -48,8 +52,8 @@ export class CarroslistComponent {
     })    
   }
 
- 
+ */
 
 
 
-}//FIM CLASS
+}
