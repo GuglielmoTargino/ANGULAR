@@ -28,8 +28,10 @@
                                     <td>{{x.ano}}</td>                                   
 
                                     <td class="direita"> 
+                                        <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="alugar(x, x.id)">Alugar</button>
                                         <button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>                                                                                                                           
                                         <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="deletar(x.id)">Deletar</button>
+                                        
                                     </td>
                                 </tr>
                             }                            

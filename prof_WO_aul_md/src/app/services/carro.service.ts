@@ -33,15 +33,16 @@ export class CarroService {
     return this.http.post<string>(this.api+"/atualizar"+id,carro, {responseType:'text' as 'json'});
   }
 
-
-   delete(idcarro: number): Observable<string>{
+ delete(idcarro: number): Observable<string>{
     return this.http.delete<string>(this.api+"/delete/"+idcarro, {responseType:'text' as 'json'});
   }
+  
 
+ alugar(carro: Carro, idcarro: number): Observable<string>{
+    return this.http.delete<string>(this.api+"/aluga/"+idcarro, {body: carro, responseType:'text' as 'json'});
+  }
 
-
-
-  // //////////////////////atualiza alugados
+  // //////////////////////atualiza alugados aqui ////////////////////
    findallalug(): Observable<Carro[]>{
     return this.http.get<Carro[]>(this.api+"/findallalug");
   }

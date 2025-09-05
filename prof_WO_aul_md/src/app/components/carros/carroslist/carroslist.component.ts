@@ -48,6 +48,18 @@ export class CarroslistComponent {
     })    
   }
 
+  alugar(carro: Carro, num: number){
+    this.carroservice.alugar(carro, num).subscribe({    
+      next: vallue => {// requisição success
+         alert("Carro deletado"); 
+         this.atzCarro();           
+      },
+      error: erro => {// requisição fail
+        alert("Falha de resposta de dados"+erro);          
+      },
+    })    
+  }
+
  
 
 
