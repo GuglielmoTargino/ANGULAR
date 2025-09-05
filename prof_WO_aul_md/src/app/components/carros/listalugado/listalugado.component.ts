@@ -6,7 +6,6 @@ import { CarroService } from '../../../services/carro.service';
 import { CarrosdetailComponent } from '../carrosdetail/carrosdetail.component';
 import { NgFor } from '@angular/common';
 
-
 @Component({
   selector: 'app-listalugado',
   imports: [],
@@ -17,17 +16,13 @@ export class ListalugadoComponent {
   lista: Carro[]=[];
   carroservice = inject(CarroService);
   carro: Carro = new Carro(0,'',0,'','');
-
-
    devolver(num: number){
     alert("Carro devolvido!"+num)
   }
 
    constructor(){
     this.atzCarro();
-  }
-
-  
+  }  
   atzCarro(){
       this.carroservice.findallalug().subscribe({
       next: vallue => {// requisição success
@@ -37,23 +32,20 @@ export class ListalugadoComponent {
         alert("Falha de resposta de dados"+erro);          
       },
     })
-  }
-
-    
-  devolve(num: number){
-    this.carroservice.deletealug(num).subscribe({    
+  }    
+  
+    devolve(carro: Carro, num: number){       
+      this.carroservice.deletealug(carro,num).subscribe({ 
+        //devolve(num: number){ 
+        //this.carroservice.deletealug(num).subscribe({ 
       next: vallue => {// requisição success
          alert("Carro devolvido"); 
          this.atzCarro();           
       },
       error: erro => {// requisição fail
-        alert("Falha de resposta de dados"+erro);          
+        alert("Falha de resposta de dados"+erro);      
       },
     })    
   }
-
- 
-
-
 
 }

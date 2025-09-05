@@ -12,9 +12,6 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './carrosdetail.component.html',
   styleUrl: './carrosdetail.component.css'
 })
-
-
-
 export class CarrosdetailComponent {
   
   @Input("carro") carro: Carro = new Carro(0,"",0,"","");
@@ -22,8 +19,7 @@ export class CarrosdetailComponent {
   carango: Carro = new Carro(0,"",0,"","");
   router=inject(ActivatedRoute);
 
-  carroservice = inject(CarroService);
-  
+  carroservice = inject(CarroService);  
 
   constructor(){
     let id =this.router.snapshot.params['id'];
@@ -34,7 +30,6 @@ export class CarrosdetailComponent {
   }
 
   save(xy: Carro){
-
      this.carroservice.save(xy).subscribe({
 
       next: retor =>{
@@ -69,7 +64,6 @@ export class CarrosdetailComponent {
 
    find(id: number){
     this.carroservice.find(id).subscribe({
-   
 
       next: retor =>{
         this.carango =retor;     
