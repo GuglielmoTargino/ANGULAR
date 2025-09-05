@@ -51,7 +51,7 @@ export class CarroslistComponent {
   alugar(carro: Carro, num: number){
     this.carroservice.alugar(carro, num).subscribe({    
       next: vallue => {// requisição success
-         alert("Carro deletado"); 
+         alert("Carro Alugado"); 
          this.atzCarro();           
       },
       error: erro => {// requisição fail
