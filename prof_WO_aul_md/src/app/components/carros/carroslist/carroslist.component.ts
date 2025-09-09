@@ -15,6 +15,7 @@ import { NgFor } from '@angular/common';
 })
 
 export class CarroslistComponent {
+  
   lista: Carro[]=[];
   carroservice = inject(CarroService);
   carro: Carro = new Carro(0,'',0,'','');

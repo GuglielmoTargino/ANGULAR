@@ -61,6 +61,8 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import { Router } from '@angular/router';
+import { Usuario } from '../../../models/usuario';
+import { UsuarioService } from '../../../services/usuario.service';
 //import { LoginService } from '../../../auth/login.service';
 ;
 
@@ -70,21 +72,75 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
 
-
-  
+export class LoginComponent {  
+  usuarioServi= inject(UsuarioService);  
   usu!: string;
   sen!: string;
+  router = inject(Router); 
 
-  router = inject(Router);
+login(){
+  const usuario: Usuario ={
+    id: 0,
+    nomeusu: this.usu,
+    senha: this.sen
 
-  logar(){
+  };
+      this.usuarioServi.loging(usuario).subscribe({
+      next: vallue => {// requisição success
+        if(vallue){
+          this.router.navigate(['admin/carros']); 
+        }        
+      },
+      error: erro => {// requisição fail
+        alert("Falha de resposta de dados"+erro);          
+      },
+    })
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+logar(){
     if(this.usu == 'admin' && this.sen == 'admin'){
       this.router.navigate(['admin/carros']);
     }else
     alert("Senha ou usuário errado");
   }
+
+  
 }
 
  
