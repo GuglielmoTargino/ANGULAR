@@ -1,1 +1,43 @@
-<p>listalugado works!</p>
+
+
+<div class="container">
+    <div class="row">  
+        <h2>Disponíveis para Alugar </h2> 
+        <div class="col-lg-12">
+            <br>
+            <div class="card">
+                <div class="card-body">                  
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>                        
+                                <th>ID</th>                                                         
+                                <th>Nome</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                 <th>Ano</th>                                 
+                            </tr>
+                        </thead>                    
+                        <tbody>
+                            @for (x of lista; track $index){
+                                <tr>
+                                    <td>{{x.id}}</td>
+                                    <td>{{x.nome}}</td>
+                                    <td>{{x.marca}}</td>
+                                    <td>{{x.modelo}}</td>
+                                    <td>{{x.ano}}</td>                                   
+
+                                    <td class="direita"> 
+                                        <!--<button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>-->                                                                                                                        
+                                        <button type="button" class="btn-rounded" mdbRipple (click)="devolve(x , x.id)">Devolver</button>
+                                        <!--<button type="button" class="btn-rounded" mdbRipple (click)="devolve(x.id)">Devolver</button>-->
+                                    </td>
+                                </tr>
+                            }                            
+                        </tbody>
+                    </table>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

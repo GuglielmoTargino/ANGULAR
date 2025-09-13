@@ -1,1 +1,64 @@
-<p>carrosdetail works!</p>
+
+<div class="container">
+    <div class="row">
+
+        <h2>Cadastro de Carros</h2>
+
+        <div class="col-lg-4">
+        </div>
+      
+        <div class="col-lg-4 centralizar topo">
+            <h2>Informe os dados</h2>
+
+            <div class="card">
+                <div class="card-body">  
+                    
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="put1" class="form-control" [(ngModel)]="carango.id" />
+                        <label mdbLabel class="form-label" for="lblusuario">ID</label>
+                        </mdb-form-control>
+                    <br>
+                    
+                     <mdb-form-control>
+                        <input mdbInput type="text" id="put2" class="form-control" [(ngModel)]="carango.nome" />
+                        <label mdbLabel class="form-label" for="lblusuario">Nome</label>
+                        </mdb-form-control>
+                    <br>
+
+                     <mdb-form-control>
+                        <input mdbInput type="text" id="put3" class="form-control" [(ngModel)]="carango.ano" />
+                        <label mdbLabel class="form-label" for="lblusuario">Ano</label>
+                        </mdb-form-control>
+                    <br>
+
+                     <mdb-form-control>
+                        <input mdbInput type="text" id="put4" class="form-control" [(ngModel)]="carango.marca" />
+                        <label mdbLabel class="form-label" for="lblusuario">Marca</label>
+                        </mdb-form-control>
+                    <br>
+
+                     <mdb-form-control>
+                        <input mdbInput type="text" id="put5" class="form-control" [(ngModel)]="carango.modelo" />
+                        <label mdbLabel class="form-label" for="lblusuario">Modelo</label>
+                        </mdb-form-control>
+                    <br>
+                  
+                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="save(carango)">SALVAR</button>
+                        
+                </div>
+            </div>
+
+         
+        </div>
+
+        <div class="col-lg-4">
+        </div>
+
+    </div>
+
+   
+
+</div>
+
+
+
