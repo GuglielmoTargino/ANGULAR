@@ -5,37 +5,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Tela com Background</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('carros_confianca-1080x565.jpg'); /* pasta: src/main/resources/static/images */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex; /* para centralizar */
-            align-items: center;
-            justify-content: center;
-        }
-
-        .centralizar {
-            text-align: center;
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.9); /* branco com transparência */
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -82,43 +51,3 @@
 
 
 
-<!--original aqui                       
-
-<div class="container">
-    <div class="row">
-
-        <div class="col-lg-4">
-        </div>
-      
-        <div class="col-lg-4 centralizar topo">
-            <h1> Identifique-se</h1>
-
-            <div class="card">
-                <div class="card-body">  
-                    
-                    <mdb-form-control>
-                        <input mdbInput type="text" id="putusuario" class="form-control" [(ngModel)]="usu" />
-                        <label mdbLabel class="form-label" for="lblusuario">Usuário</label>
-                        </mdb-form-control>
-                    <br>
-                        <mdb-form-control>
-                        <input mdbInput type="password" id="putsenha" class="form-control" [(ngModel)]="sen"  (keyup.enter)="login()"/>
-                        <label mdbLabel class="form-label" for="lblsenha">Senha</label>
-                        </mdb-form-control>
-                    <br>
-                        <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="login()">Acessar</button>
-                </div>
-            </div>         
-        </div>       
-    
-        <div class="col-lg-4">
-        </div>
-
-    </div>
-
-   
-
-
-</div>
-
-  -->
