@@ -15,29 +15,29 @@ import { Router, RouterOutlet } from '@angular/router';
 
 export class AppComponent {
 
-  router = inject(Router); 
+  //router = inject(Router); 
   title = 'pjt8semfrt1';
-  searchTerm: string = '';
+  //searchTerm: string = '';
 
-  cars = [
-    { name: 'Sedan Luxo', price: 'R$ 120.000', image: 'assets/sedan.jpg' },
-    { name: 'SUV Confort', price: 'R$ 150.000', image: 'assets/suv.jpg' },
-    { name: 'Esportivo Turbo', price: 'R$ 250.000', image: 'assets/sport.jpg' },
-  ];
+  //cars = [
+    //{ name: 'Sedan Luxo', price: 'R$ 120.000', image: 'assets/sedan.jpg' },
+    //{ name: 'SUV Confort', price: 'R$ 150.000', image: 'assets/suv.jpg' },
+   // { name: 'Esportivo Turbo', price: 'R$ 250.000', image: 'assets/sport.jpg' },
+  //];
 
-  get filteredCars() {
-    return this.cars.filter(car =>
-      car.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
-  }
+  //get filteredCars() {
+    //return this.cars.filter(car =>
+     // car.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    //);
+  //}
 
-login(){
+//login(){
 
-  this.router.navigate(['/login']); 
+  //this.router.navigate(['/login']); 
   
 
       
-  }
+ // }
 
 
 }

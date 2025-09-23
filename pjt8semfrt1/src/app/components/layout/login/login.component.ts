@@ -43,4 +43,37 @@ login(){
     })
   }
 
+  volta(){
+    this.router.navigate(['home']); 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////fim classe  
 }

@@ -1,25 +1,29 @@
 
-<router-outlet></router-outlet>
-
-
-<!--
+<body>
 
 <div class="container">
   <header>
     <h1>Loja de Carros</h1>
     <nav>
       <a href="#">Home</a>
-      <a href="#" >Login</a>
-      <button type="button" class="btn btn-primary btn-rounded" (click)="login()">Acessar</button>
+      <button type="button" class="btn btn-primary btn-rounded" (click)="login()">Login</button>
       <a href="#">Sobre</a>
       <a href="#">Contato</a>
     </nav>
   </header>
-  
 
   <section class="hero">
     <h2>Encontre o carro dos seus sonhos!</h2>
     <p>Oferecemos os melhores carros com os melhores preços.</p>
+
+    <section class="car-list">
+    <div class="car-card" *ngFor="let carro of carsshow">
+      <img [src]="carro.image" alt="{{carro.name}}">
+      <h4>{{carro.name}}</h4>
+      <p>Preço: R$ {{carro.price}}</p>
+      <button>Comprar</button>
+    </div>
+  </section>
     <button>Ver Carros</button>
 
   </section>
@@ -36,12 +40,11 @@
 
   <footer>
     <p>&copy; 2025 Loja de Carros. Todos os direitos reservados.</p>
-  </footer>
-
-  
+  </footer>  
 </div>
 
+</body>
 
 
--->
+
 
