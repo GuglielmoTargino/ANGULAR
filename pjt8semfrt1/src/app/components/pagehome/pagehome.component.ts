@@ -23,11 +23,11 @@ export class PagehomeComponent {
 
   carsshow = [
 
-    { name: 'Sedan Luxo', price: 'R$ 120.000', image: 'assets/sedan.jpg' },
-    { name: 'SUV Confort', price: 'R$ 150.000', image: 'assets/suv.jpg' },
-    { name: 'Esportivo Turbo', price: 'R$ 250.000', image: 'assets/sport.jpg' },
-    { name: 'Sedan Luxo', price: 'R$ 120.000', image: 'assets/sedan.jpg' },
-    { name: 'SUV Confort', price: 'R$ 150.000', image: 'assets/suv.jpg' },
+    { name: 'Sedan Luxo', price: 'R$ 120.000', image: 'bmw.jpg' },
+    { name: 'Esportivo Clássico', price: 'R$ 150.000', image: 'ferrari.jpg' },
+    { name: 'Esportivo Turbo', price: 'R$ 250.000', image: 'ferrariama.jpg' },
+    { name: 'Sedan Médio', price: 'R$ 120.000', image: 'pLIO.jpg' },
+    { name: 'Esportivos', price: 'R$ 150.000', image: 'lojacar.jpg' },
     
 ];
 

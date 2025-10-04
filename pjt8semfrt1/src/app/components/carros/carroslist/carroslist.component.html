@@ -15,8 +15,10 @@
                                 <th>ID</th>                                                         
                                 <th>Nome</th>
                                 <th>Marca</th>
-                                <th>Modelo</th>
-                                 <th>Ano</th>                                 
+                                                            
+                                 <th>Ano</th> 
+                                 
+                                 <!--    <th>Modelo</th>    -->
                             </tr>
                         </thead>                    
                         <tbody>
@@ -25,8 +27,10 @@
                                     <td>{{x.id}}</td>
                                     <td>{{x.nome}}</td>
                                     <td>{{x.marca}}</td>
-                                    <td>{{x.modelo}}</td>
-                                    <td>{{x.ano}}</td>                                   
+                                    
+                                    <td>{{x.ano}}</td>  
+                                    
+                                    <!--   <td>{{x.modelo}}</td>    -->
 
                                     <td class="direita"> 
                                         <button type="button" class="btn btn-danger btn-rounded" mdbRipple (click)="alugar(x, x.id)">Alugar</button>

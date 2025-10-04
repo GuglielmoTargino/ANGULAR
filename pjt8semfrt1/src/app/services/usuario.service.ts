@@ -19,9 +19,5 @@ export class UsuarioService {
   loging(usuaru: Usuario): Observable<Usuario>{
     return this.http.post<Usuario>(this.api,usuaru);
   }
-
-
-
-
   
 }

@@ -5,6 +5,7 @@ export class Carro {
     marca!:string;
     modelo!:string;
      ano!:number;
+  
 
     constructor(id: number, nome: string , ano: number, marca: string, modelo: string){
         this.id=id;
@@ -12,6 +13,6 @@ export class Carro {
         this.marca=marca;
         this.modelo=modelo;
         this.ano=ano;
-        
+       
     }
 }

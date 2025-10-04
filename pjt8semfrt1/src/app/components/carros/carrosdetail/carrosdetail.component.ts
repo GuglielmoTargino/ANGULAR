@@ -39,7 +39,7 @@ export class CarrosdetailComponent {
         alert(retor);     
       },
       error: erro =>{
-        alert("Sem carro ");
+        alert("Para salvar, campo ID deve ser em branco.");
       }
       });
  

@@ -12,9 +12,9 @@
                             <tr>                        
                                 <th>ID</th>                                                         
                                 <th>Nome</th>
-                                <th>Marca</th>
-                                <th>Modelo</th>
-                                 <th>Ano</th>                                 
+                                <th>Marca</th>                                
+                                 <th>Ano</th> 
+                                 <th>Alugado em:</th>                               
                             </tr>
                         </thead>                    
                         <tbody>
@@ -22,9 +22,11 @@
                                 <tr>
                                     <td>{{x.id}}</td>
                                     <td>{{x.nome}}</td>
-                                    <td>{{x.marca}}</td>
-                                    <td>{{x.modelo}}</td>
-                                    <td>{{x.ano}}</td>                                   
+                                    <td>{{x.marca}}</td>                                    
+                                    <td>{{x.ano}}</td>  
+                                    <td>{{x.modelo}}</td> 
+                                 
+                                        <!--      -->                          
 
                                     <td class="direita"> 
                                         <!--<button type="button" id="botao" class="btn btn-primary btn-rounded" mdbRipple routerLink="/admin/carros/edit/{{x.id}}">Editar</button>-->                                                                                                                        
@@ -40,4 +42,6 @@
         </div>
     </div>
 </div>
+
+
 
