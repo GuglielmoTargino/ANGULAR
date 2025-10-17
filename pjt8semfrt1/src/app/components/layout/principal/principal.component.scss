@@ -3,15 +3,29 @@
     top: 0;
     height: 100%;
     width: 300px;
-    background-color: rgb(219, 241, 241);
+    background-color: rgb(241, 245, 245);
 
    
     border-right-style: solid;
     border-width: 2px;
-    border-color: #4f4e50;
+    border-color: #8d69b1;
+
+        /*background-image: url('../login/carros_confianca-1080x565.jpg'); /* pasta: src/main/resources/static/images */
+
+        
+        background-image: url('../login/perfilsiderbar.jpg'); /* pasta: src/main/resources/static/images */
+
+
+
+
+
    
 }
 
 .conteiner-fluid{
     padding-left: 300px;
 }
+
+
+
+
